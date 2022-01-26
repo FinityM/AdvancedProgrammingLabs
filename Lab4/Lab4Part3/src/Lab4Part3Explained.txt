@@ -1,0 +1,70 @@
+1. Create a class called Translator that extends JFrame
+
+2. Create three JLabel variables, each with Nine, Eight and Seven inside the
+   brackets of the Jlabel so JLabel lbl = new JLabel("Nine") etc.
+
+3. Create a JButton variable with "Translate to Spanish" set as the text in the button
+
+4. Create an empty constructor for the class, so declare Translator(){}
+
+5. Inside the curly brace of Translator add the JLabels, add(lbl) etc.
+
+6. Add an action listener for the button
+
+7. Set the JFrame such as setTitle (If you want to set a title), setVisible(true), setSize()
+   inside of Translator()
+
+8. Declare action performed method with ActionEvent, actionPerformed(ActionEvent e)
+
+9. Declare a resource bundle variable using ResourceBundle. e.g ResourceBundle rb
+
+10. Make rb = ResourceBundle.getBundle("Name of program properties java file")
+
+11. Do if (e.getSource() == btn)
+
+12. Set the text of the labels, e.g. lbl.setText(re.getString("Nameofkey"))
+    Name of key means the key you set in the intellij properties file
+    Do the same for the button as well, btn.setText.....
+
+13. Create a class called ProgramProperties_languageofchoice, not literally language
+    of choice just ProgramProperties_de for German for example
+
+14. Make it extend PropertyResourceBundle
+
+15. Create a constructor with the same name as the class and
+    make it throw an IOException by using "throws" after the
+    constructor brackets, ProgramProperties_name() throws.....
+
+    Note: name is NOT literally name, it is the name of the language
+          you've chosen for example ProgramProperties_de
+
+16. Declare a super and inside you will put in ProgramProperties_name
+
+17. Create a properties file in the src folder, right click the src folder and hover over new.
+    Look for "Resource Bundle" and press that.
+    Name it the same as your properties java file, for instance
+    ProgramProperties_de.
+    Press ok
+    You'll now see, for this example ProgramProperties_de.properties
+    on the left of your IntelliJ window
+    Double click that properties file
+
+18. Create a key by typing in the properties file "Nine" and make it
+    equal to the language your translating it to.
+    e.g. Nine="Neun"
+    Remember: your key cannot have spaces so if you have something like
+    "Translate to chosen language", you can't do Translate to chosen language = "Translate to chosen language"
+    Java will kill you,
+    So make a key without spaces and make it short, Translate="Translate to chosen language"
+    You can also name the key whatever you want as long as you
+    call it properly with the resource bundle variable
+    e.g. re.getString("Translate") where "Translate" is the property key
+
+19. Create keys as well for the other numbers and the button
+
+20. Create a main method and call a "new Translator()" object
+
+
+
+
+
